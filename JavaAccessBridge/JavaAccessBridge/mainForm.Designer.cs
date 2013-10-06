@@ -23,6 +23,7 @@
         /// コード エディターで変更しないでください。
         /// </summary>
         private void InitializeComponent() {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.buttonSelectedItem = new System.Windows.Forms.Button();
             this.buttonGetList = new System.Windows.Forms.Button();
@@ -32,11 +33,28 @@
             this.buttonClear = new System.Windows.Forms.Button();
             this.buttonSearchWindow = new System.Windows.Forms.Button();
             this.textBoxLog = new System.Windows.Forms.TextBox();
+            this.textBoxX = new System.Windows.Forms.TextBox();
+            this.textBoxY = new System.Windows.Forms.TextBox();
+            this.textBox_x = new System.Windows.Forms.TextBox();
+            this.textBox_y = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.timerMousePos = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.textBox_y);
+            this.panel1.Controls.Add(this.textBox_x);
+            this.panel1.Controls.Add(this.textBoxY);
+            this.panel1.Controls.Add(this.textBoxX);
             this.panel1.Controls.Add(this.buttonSelectedItem);
             this.panel1.Controls.Add(this.buttonGetList);
             this.panel1.Controls.Add(this.textBoxGetList);
@@ -125,6 +143,75 @@
             this.textBoxLog.Size = new System.Drawing.Size(599, 284);
             this.textBoxLog.TabIndex = 6;
             // 
+            // textBoxX
+            // 
+            this.textBoxX.Location = new System.Drawing.Point(289, 14);
+            this.textBoxX.Name = "textBoxX";
+            this.textBoxX.Size = new System.Drawing.Size(71, 19);
+            this.textBoxX.TabIndex = 13;
+            // 
+            // textBoxY
+            // 
+            this.textBoxY.Location = new System.Drawing.Point(401, 14);
+            this.textBoxY.Name = "textBoxY";
+            this.textBoxY.Size = new System.Drawing.Size(71, 19);
+            this.textBoxY.TabIndex = 14;
+            // 
+            // textBox_x
+            // 
+            this.textBox_x.Location = new System.Drawing.Point(289, 41);
+            this.textBox_x.Name = "textBox_x";
+            this.textBox_x.Size = new System.Drawing.Size(71, 19);
+            this.textBox_x.TabIndex = 15;
+            // 
+            // textBox_y
+            // 
+            this.textBox_y.Location = new System.Drawing.Point(401, 41);
+            this.textBox_y.Name = "textBox_y";
+            this.textBox_y.Size = new System.Drawing.Size(71, 19);
+            this.textBox_y.TabIndex = 16;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(272, 21);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(12, 12);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "X";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(272, 41);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(11, 12);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "x";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(383, 21);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(12, 12);
+            this.label3.TabIndex = 19;
+            this.label3.Text = "Y";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(384, 44);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(11, 12);
+            this.label4.TabIndex = 20;
+            this.label4.Text = "y";
+            // 
+            // timerMousePos
+            // 
+            this.timerMousePos.Enabled = true;
+            this.timerMousePos.Tick += new System.EventHandler(this.timerMousePos_Tick);
+            // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -160,6 +247,15 @@
         private System.Windows.Forms.Button buttonGetList;
         private System.Windows.Forms.TextBox textBoxGetList;
         private System.Windows.Forms.Button buttonSelectedItem;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox_y;
+        private System.Windows.Forms.TextBox textBox_x;
+        private System.Windows.Forms.TextBox textBoxY;
+        private System.Windows.Forms.TextBox textBoxX;
+        private System.Windows.Forms.Timer timerMousePos;
     }
 }
 

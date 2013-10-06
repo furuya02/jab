@@ -124,6 +124,40 @@ namespace JavaAccessBridge{
                 }
             }
         }
+
+        [DllImport("user32.dll")]
+        static extern bool GetWindowRect(IntPtr hWnd, out RECT lpRect);
+        
+        [StructLayout(LayoutKind.Sequential)]
+        internal struct RECT
+        {
+            internal int left;
+            internal int top;
+            internal int right;
+            internal int bottom;
+        }
+
+
+        private void timerMousePos_Tick(object sender, EventArgs e) {
+            int X = Cursor.Position.X;
+            int Y = Cursor.Position.Y;
+            textBoxX.Text = X.ToString();
+            textBoxY.Text = Y.ToString();
+
+            if (textBoxHandle.Text != ""){
+                RECT rect = new RECT();
+                var hWnd = new IntPtr(Int32.Parse(textBoxHandle.Text));
+                GetWindowRect(hWnd,out rect);
+
+                textBox_x.Text = (Y - rect.top).ToString();
+                textBox_y.Text = (X-rect.left).ToString();
+
+            } else{
+                textBox_x.Text = "";
+                textBox_y.Text = "";
+            }
+
+        }
         
 
     }
